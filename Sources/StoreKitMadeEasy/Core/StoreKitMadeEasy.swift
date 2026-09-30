@@ -5,13 +5,16 @@ import Combine
 import UIKit
 #endif
 
-/// Main entry point for In-App Purchase operations with StoreFlow.
+/// Main entry point for In-App Purchase operations with StoreKitMadeEasy.
 /// Designed for SwiftUI and UIKit apps using Swift Concurrency.
+/// Convenience alias
+public typealias StoreFlow = StoreKitMadeEasy
+
 @MainActor
-public final class StoreFlow: ObservableObject {
+public final class StoreKitMadeEasy: ObservableObject {
     
     // MARK: - Singleton
-    public static let shared = StoreFlow()
+    public static let shared = StoreKitMadeEasy()
     
     // MARK: - Published Properties
     /// Fetched products with localized pricing and trial availability.

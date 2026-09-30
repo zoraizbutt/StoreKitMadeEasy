@@ -1,7 +1,7 @@
 import XCTest
-@testable import StoreFlow
+@testable import StoreKitMadeEasy
 
-final class StoreFlowTests: XCTestCase {
+final class StoreKitMadeEasyTests: XCTestCase {
 
     func testMockProductCalculations() {
         let yearly = MockStoreFlow.sampleProducts.first(where: { $0.id == "com.storeflow.yearly" })

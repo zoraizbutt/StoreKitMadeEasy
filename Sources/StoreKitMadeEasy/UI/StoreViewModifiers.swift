@@ -10,7 +10,7 @@ public struct ManageSubscriptionsModifier: ViewModifier {
             .onChange(of: isPresented) { shouldShow in
                 if shouldShow {
                     Task { @MainActor in
-                        try? await StoreFlow.shared.showManageSubscriptions()
+                        try? await StoreKitMadeEasy.shared.showManageSubscriptions()
                         isPresented = false
                     }
                 }
@@ -25,7 +25,7 @@ public struct OfferCodeRedemptionModifier: ViewModifier {
         content
             .onChange(of: isPresented) { shouldShow in
                 if shouldShow {
-                    StoreFlow.shared.presentOfferCodeRedemptionSheet()
+                    StoreKitMadeEasy.shared.presentOfferCodeRedemptionSheet()
                     isPresented = false
                 }
             }

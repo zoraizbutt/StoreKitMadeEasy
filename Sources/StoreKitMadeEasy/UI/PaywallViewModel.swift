@@ -11,14 +11,14 @@ public final class PaywallViewModel: ObservableObject {
     @Published public var errorMessage: String?
     @Published public var purchaseSuccess: Bool = false
 
-    private let store: StoreFlow
+    private let store: StoreKitMadeEasy
     private var cancellables = Set<AnyCancellable>()
 
     public convenience init() {
         self.init(store: .shared)
     }
 
-    public init(store: StoreFlow) {
+    public init(store: StoreKitMadeEasy) {
         self.store = store
         
         // Auto-select the first product or annual product when available

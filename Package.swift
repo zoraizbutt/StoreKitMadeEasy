@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "StoreFlow",
+    name: "StoreKitMadeEasy",
     platforms: [
         .iOS(.v15),
         .macOS(.v12),
@@ -13,22 +13,22 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "StoreFlow",
-            targets: ["StoreFlow"]
+            name: "StoreKitMadeEasy",
+            targets: ["StoreKitMadeEasy"]
         ),
     ],
     dependencies: [],
     targets: [
         .target(
-            name: "StoreFlow",
+            name: "StoreKitMadeEasy",
             dependencies: [],
-            path: "Sources/StoreFlow",
+            path: "Sources/StoreKitMadeEasy",
             resources: []
         ),
         .testTarget(
-            name: "StoreFlowTests",
-            dependencies: ["StoreFlow"],
-            path: "Tests/StoreFlowTests"
+            name: "StoreKitMadeEasyTests",
+            dependencies: ["StoreKitMadeEasy"],
+            path: "Tests/StoreKitMadeEasyTests"
         ),
     ]
 )

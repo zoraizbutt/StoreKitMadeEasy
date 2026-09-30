@@ -3,8 +3,10 @@ import StoreKit
 import Combine
 
 /// A mock provider for SwiftUI Previews and offline UI testing.
+public typealias MockStoreFlow = MockStoreKitMadeEasy
+
 @MainActor
-public final class MockStoreFlow: ObservableObject {
+public final class MockStoreKitMadeEasy: ObservableObject {
     
     @Published public var products: [IAPProduct] = []
     @Published public var activeEntitlements: [String: Entitlement] = [:]
@@ -12,7 +14,7 @@ public final class MockStoreFlow: ObservableObject {
     @Published public var simulateFailure: Bool = false
     
     public init() {
-        self.products = MockStoreFlow.sampleProducts
+        self.products = MockStoreKitMadeEasy.sampleProducts
     }
 
     /// Pre-populated mock products with trials, subscriptions, and non-consumables.
